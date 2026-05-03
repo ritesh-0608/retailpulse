@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RetailPulse Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+    function showDateTime() {
+        const now = new Date();
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        const dateStr = now.toLocaleDateString(undefined, options);
+        const timeStr = now.toLocaleTimeString();
+        document.getElementById('datetime').innerText = `${dateStr} ${timeStr}`;
+    }
+    window.onload = function() {
+        showDateTime();
+        setInterval(showDateTime, 1000);
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <div id="datetime" class="top-left"></div>
+        <div class="top-middle">RetailPulse Dashboard</div>
+    </header>
+    <main>
+        <section class="greeting">
+            <h2>Welcome to RetailPulse Analytics Portal</h2>
+            <p>
+                Features:<br>
+                &bull; View sales analysis (year, month, product-wise)<br>
+                &bull; Advanced analytics: Classification (J48), Clustering (K-Means)<br>
+                &bull; Interactive dashboard and visualizations<br>
+            </p>
+            <button onclick="window.location.href='analysis.html'">Analysis</button>
+            <button onclick="window.location.href='detail_analysis.html'">Detail Analysis</button>
+        </section>
+        <footer>
+            <h3>Contact Information</h3>
+            <p>Email: support@retailpulse.com</p>
+            <p>Phone: +91-9876543210</p>
+            <p>Address: 321 Fusion Ave, Mumbai, India</p>
+        </footer>
+    </main>
+</body>
+</html>

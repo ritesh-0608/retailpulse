@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sales Analysis - RetailPulse Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <button onclick="window.location.href='index.html'" class="home-btn">Home</button>
+        <div class="top-middle">RetailPulse Dashboard</div>
+    </header>
+    <main>
+        <section>
+            <label for="analysisType">View Sales Analysis:</label>
+            <select id="analysisType" onchange="updateAnalysis()">
+                <option value="year">Year-wise</option>
+                <option value="month">Month-wise</option>
+                <option value="product">Product-wise</option>
+            </select>
+            <div id="analysis-loading" class="loading" style="display:none;">Loading...</div>
+            <div id="analysis-error" class="error" style="display:none;"></div>
+            <canvas id="salesChart" width="600" height="250"></canvas>
+        </section>
+        <section>
+            <h3>Top 5 Selling Products</h3>
+            <div id="products-loading" class="loading" style="display:none;">Loading...</div>
+            <div id="products-error" class="error" style="display:none;"></div>
+            <table id="topProducts">
+                <tr>
+                    <th>Product Name</th>
+                    <th>Quantity Sold</th>
+                    <th>Rate/Piece (in Rupees)</th>
+                    <th>Sale (in Rupees)</th>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <h3>Top 3 Months by Sales</h3>
+            <div id="months-loading" class="loading" style="display:none;">Loading...</div>
+            <div id="months-error" class="error" style="display:none;"></div>
+            <table id="topMonths">
+                <tr>
+                    <th>Month</th>
+                    <th>Sale (in Rupees)</th>
+                    <th>Most Sold Item</th>
+                </tr>
+            </table>
+        </section>
+    </main>
+    <script>
+      document.addEventListener("DOMContentLoaded", updateAnalysis);
+    </script>
+</body>
+</html>

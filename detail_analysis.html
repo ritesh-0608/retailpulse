@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detail Analysis - RetailPulse Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <header>
+        <button onclick="window.location.href='index.html'" class="home-btn">Home</button>
+        <div class="top-middle">RetailPulse Dashboard</div>
+    </header>
+    <main>
+        <label for="detailType">Select Analysis Type:</label>
+        <select id="detailType" onchange="runDetailAnalysis()">
+            <option value="classification">Classification</option>
+            <option value="clustering">Clustering</option>
+        </select>
+        <div id="detail-loading" class="loading" style="display:none;">Loading...</div>
+        <div id="detail-error" class="error" style="display:none;"></div>
+        <div id="detailResult"></div>
+    </main>
+    <script>
+      document.addEventListener("DOMContentLoaded", runDetailAnalysis);
+    </script>
+</body>
+</html>
