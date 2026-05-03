@@ -1,0 +1,14 @@
+# IDEs and Editors
+/.vscode/
+/.idea/
+*.suo
+*.sw?
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Ignore any accidental text backups
+codes/
+*.txt
