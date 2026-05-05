@@ -55,3 +55,5 @@ Here is a look at the system in action (extracted from the project report):
 <div align="center">
   <i>Engineered with ❤️ by Ritesh.</i>
 </div>
+
+<!-- minor format update -->
