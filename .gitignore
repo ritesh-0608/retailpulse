@@ -12,3 +12,5 @@ desktop.ini
 # Ignore any accidental text backups
 codes/
 *.txt
+
+# end of gitignore
